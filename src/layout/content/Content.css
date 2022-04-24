@@ -1,0 +1,32 @@
+.container {
+  /* grid-area: content; */
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.even-columns {
+  background-image: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: red;
+}
+
+.even-columns .col {
+  color: whitesmoke;
+  flex: 0 1 30%;
+  height: auto;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: -12px 10px 19px -13px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: -12px 10px 19px -13px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -12px 10px 19px -13px rgba(0, 0, 0, 0.62);
+}
+
+.even-columns .col.grid1 {
+  display: grid;
+  grid-gap: 1rem 0;
+  grid-template-columns: auto 4.5rem;
+  grid-template-rows: 3.25rem auto;
+}

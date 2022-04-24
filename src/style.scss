@@ -1,0 +1,37 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+h1,
+p {
+  font-family: Lato;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.main__layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 2px;
+  height: 100vh;
+}
+
+.row > [class^='col-'] {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(39, 41, 43, 0.03);
+  border: 1px solid rgba(39, 41, 43, 0.1);
+}
+.layout-center{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: whitesmoke;
+height: 100vh;
+}
+.layout{
+  background-color: whitesmoke;
+  height: 100vh;
+  }

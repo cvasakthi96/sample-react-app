@@ -1,0 +1,10 @@
+.progress_bar_wrapper {
+  height: 4px;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+  .progress_bar {
+    height: 4px;
+    background-color: rgb(0, 255, 0);
+  }
+}

@@ -1,0 +1,93 @@
+.chat__window {
+  width: 250px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  justify-content: space-between;
+  box-shadow: -5px 10px 63px -3px rgba(105, 98, 98, 0.51);
+  -webkit-box-shadow: -5px 10px 63px -3px rgba(105, 98, 98, 0.51);
+  -moz-box-shadow: -5px 10px 63px -3px rgba(105, 98, 98, 0.51);
+}
+
+.chat__window .chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem;
+  background-color: rgb(230, 205, 205);
+}
+.chat__window .chat__header .chat__titile {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: lightblue;
+  border-radius: 50%;
+}
+.chat__window .chat__header .chat__close span {
+  font-size: 1.2rem;
+  /* transition: 0.2s; */
+  /* border-radius: 50%; */
+  /* font-weight: lighter;
+  align-items: center;
+  text-align: center; */
+}
+
+.chat__window .chat__header .chat__close span:hover {
+  cursor: pointer;
+  /* background-color: #80808091; */
+  color: white;
+  transform: scale(2) rotate(60deg);
+  /* transition: 0.2s; */
+  /* border-radius: 50%; */
+  /* font-weight: lighter;
+  align-items: center;
+  text-align: center; */
+}
+.chat__window .chat__body {
+  min-height: 200px;
+  max-height: 500px;
+  overflow: auto;
+}
+.chat__window.hide .chat__body .chat__footer {
+  display: none;
+}
+/* .chat__body.hide {
+  display: none;
+  transition: height 10s ease-in-out;
+}
+.chat__footer.hide {
+  display: none;
+  transition: height 10s ease-in-out;
+} */
+.chat__footer {
+  display: flex;
+  padding: 5px;
+}
+.chat__footer input {
+  border: 1px solid gray;
+  padding: 5px;
+  flex: 1;
+  border-radius: 3px;
+}
+.chat__footer button {
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: gray;
+  color: white;
+  font-size: 15px;
+}
+.chat__footer button:hover {
+  background-color: lightgray;
+}
+
+.chat__footer input:focus,
+button:focus {
+  outline: none;
+}

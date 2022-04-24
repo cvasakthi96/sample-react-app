@@ -1,0 +1,17 @@
+.section {
+  height: 80vh;
+  padding: 10px;
+  margin: 10px;
+  background-color: gray;
+  display: grid;
+  place-items: center;
+}
+.custom {
+  .flt-btn {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+  }
+}

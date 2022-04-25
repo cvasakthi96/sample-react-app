@@ -1,4 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from 'react';
 import './StepForm.scss';
 function StepWrapper({ step, totalSteps, handleStepClick }) {
   return (
@@ -93,11 +99,14 @@ export default function StepForm() {
     </div>
   );
 }
-
-function AccountSetup() {
+const AccountSetup = forwardRef((props, ref) => {
+  useImperativeHandle(ref, () => ({
+    getValues: () => {
+      return { values: {} };
+    },
+  }));
   return (
     <>
-      {' '}
       {/*   Account Setup*/}
       <div className="card shadow-lg">
         <div className="card-header">CREATE YOUR ACCOUNT</div>
@@ -121,9 +130,14 @@ function AccountSetup() {
       </div>
     </>
   );
-}
+});
 
-function PersonalDetail() {
+const PersonalDetail = forwardRef((props, ref) => {
+  useImperativeHandle(ref, () => ({
+    getValues: () => {
+      return { values: {} };
+    },
+  }));
   return (
     <>
       {' '}
@@ -161,9 +175,14 @@ function PersonalDetail() {
       </div>
     </>
   );
-}
+});
 
-function SocialProfile() {
+const SocialProfile = forwardRef((props, ref) => {
+  useImperativeHandle(ref, () => ({
+    getValues: () => {
+      return { values: {} };
+    },
+  }));
   return (
     <>
       {' '}
@@ -194,4 +213,4 @@ function SocialProfile() {
       </div>
     </>
   );
-}
+});
